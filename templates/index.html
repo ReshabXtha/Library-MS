@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Home Page{% endblock %}
+{% block 'content'%}
+     <div class="row">
+        <div class="span3">
+          <div class="well box aligncenter" style="height:100px;">
+              <a href="{% url 'book' %}" class="btn btn-color" style="padding:35px;margin:5px;font-size:24px;">Issue Book</a>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well box aligncenter">
+            <a href="{% url 'issuedbook'%}" class="btn btn-color"style="padding:35px;margin:5px;font-size:24px;">Issued Book</a>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well box aligncenter">
+            <a href="{% url 'addStudent' %}" class="btn btn-color"style="padding:35px;margin:5px;font-size:24px;">Add Student</a>
+          </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="span3">
+          <div class="well box aligncenter">
+            <a href="{% url 'requestBook' %}" class="btn btn-color"style="padding:35px;margin:5px;font-size:20px;">Request Book</a>
+          </div>
+        </div>
+        <div class="span3">
+          <div class="well box aligncenter">
+            <a href="{% url 'studentInfo' %}" class="btn btn-color"style="padding:35px;margin:5px;font-size:24px;">Student Info</a>
+          </div>
+        </div>
+         <div class="span3">
+          <div class="well box aligncenter">
+            <a href="{% url 'addBook' %}" class="btn btn-color"style="padding:35px;margin:5px;font-size:24px;">Add Book</a>
+          </div>
+        </div>
+     </div>
+{% endblock %}

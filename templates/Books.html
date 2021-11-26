@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Books Page{% endblock %}
+{% block 'content'%}
+<div class="row">
+    {% for i in books %}
+    <div class="span3">
+        <div class="well box aligncenter">
+            <h1>{{i.BookName}}</h1>
+            <p>Author:-{{i.Book_author}}</p>
+            <p>Publication:-{{i.Publication}}</p>
+            <a href="{% url 'issueBook' i.id %}" class="btn btn-color">Issue Book</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

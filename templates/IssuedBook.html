@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Issued Book{% endblock %}
+{% block 'content'%}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Sn</th>
+      <th scope="col">Name</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Issued Date</th>
+      <th scope="col">Return Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in IssuedBook %}
+        <tr>
+            <th scope="row">{{ forloop.counter}}</th>
+            <td>{{i.IssuedTo}}</td>
+            <td>{{i.Book}}</td>
+            <td>{{i.IssuedDate}}</td>
+            <td>{{i.ReturnDate}}</td>
+            <td><a href="#" class="btn btn-color">Return</a></td>
+            <td><a href="#" class="btn btn-color">Renew</a></td>
+        </tr>
+
+
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

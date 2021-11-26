@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+{% block 'title' %}Issue Book{% endblock %}
+{% block 'content'%}
+<div class="container" >
+    <div class="row">
+        <form method="post" action="{% url 'submitIssuedBook'%}" style='none'>
+            {% csrf_token %}
+            {{form.as_p }}
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

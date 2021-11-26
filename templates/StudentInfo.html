@@ -1,0 +1,22 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Student Info{% endblock %}
+{% block 'content'%}
+<h1 xmlns="http://www.w3.org/1999/html">Choose the course and semester</h1>
+<hr><hr>
+<h3>BCA</h3>
+{% for semester in sem %}
+<a href="{% url 'returnStudentInfo' semester.id %}" class="btn btn-color">{{semester.Semester}}</a>
+{% endfor %}
+
+<hr>
+<h3>Bsc.CSIT</h3>
+<a href="#" class="btn btn-color"value1="2" value2="1">1st Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="2">2nd Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="3">3rd Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="4">4th Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="5">5th Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="6">6th Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="7">7th Sem</a>
+<a href="#" class="btn btn-color"value1="2" value2="8">8th Sem</a>
+{% endblock %}

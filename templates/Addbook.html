@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Add Book Page{% endblock %}
+{% block 'content'%}
+<div class="container">
+    <div class="row">
+        <form method="post" action="{% url 'submitAddBook' %}" style="none">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
